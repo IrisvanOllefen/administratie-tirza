@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
+import AppHeader from '../components/AppHeader'
+
 export default function Home() {
   return (
     <div>
@@ -8,14 +10,7 @@ export default function Home() {
         <title>Administratiekantoor Tirza van Ollefen</title>
       </Head>
 
-      <header>
-        {/* logo */}
-        {/* menu */}
-        {/* financiele administratie */}
-        {/* fiscale aangiften */}
-        {/* jaarrekening */}
-        {/* contact */}
-      </header>
+      <AppHeader />
 
       <main className={styles.main}>
         <h1 className={styles.title}>Administratiekantoor Tirza van Ollefen</h1>
