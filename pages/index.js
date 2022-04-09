@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-
 import AppHeader from '../components/AppHeader'
 
 export default function Home() {
@@ -12,8 +10,8 @@ export default function Home() {
 
       <AppHeader />
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>Administratiekantoor Tirza van Ollefen</h1>
+      <main>
+        <h1>Administratiekantoor Tirza van Ollefen</h1>
 
         {/* foto */}
 

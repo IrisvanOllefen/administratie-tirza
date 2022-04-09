@@ -1,0 +1,41 @@
+button {
+  background-color: var(--accent);
+  padding: 1rem 1.5rem;
+  border: none;
+  color: var(--white);
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--button-shadow);
+}
+
+button:hover {
+  background-color: var(--white);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: var(--dark-accent);
+  color: var(--white);
+  transform: scale(0.95);
+}
+
+.menu-link {
+  color: var(--accent);
+  font-weight: 600;
+  line-height: 2;
+}
+
+.menu-link:hover {
+  color: var(--dark-accent);
+  font-weight: 900;
+  text-decoration-line: underline;
+  text-underline-offset: 0.5rem;
+  text-decoration-color: var(--dark-accent);
+}
+
+.menu-link:active {
+  color: var(--black);
+  text-decoration-line: none;
+}
