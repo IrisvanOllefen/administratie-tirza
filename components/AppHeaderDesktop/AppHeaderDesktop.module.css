@@ -1,0 +1,45 @@
+.contact-banner {
+  width: 100%;
+  background-color: var(--accent);
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+  color: var(--white);
+}
+
+.menu-contact-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-contact-link p {
+  padding: 0 2rem;
+}
+
+.header {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header h1 {
+  font-size: 3rem;
+}
+
+.header h2 {
+  font-size: 2.5rem;
+}
+
+.logo {
+  padding: 1rem;
+  line-height: 1.2;
+}
+
+.menu-items {
+  display: flex;
+}
+
+.menu-items li {
+  padding: 0 2rem;
+}
