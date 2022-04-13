@@ -1,8 +1,8 @@
-/* eslint-disable jsx-a11y/alt-text */
 import Link from 'next/link'
-import Image from 'next/image'
 
 import styles from './AppHeaderDesktop.module.css'
+
+import Icon from '../Icon/Icon'
 
 export default function AppHeaderDesktop() {
   return (
@@ -11,7 +11,7 @@ export default function AppHeaderDesktop() {
         <li>
           <Link href='/'>
             <a className={styles['menu-contact-link']}>
-              <Image src='/icons/phone.svg' width='20' height='20' />
+              <Icon name='phone' />
               <p>+31 6 12345678</p>
             </a>
           </Link>
@@ -19,7 +19,7 @@ export default function AppHeaderDesktop() {
         <li>
           <Link href='/'>
             <a className={styles['menu-contact-link']}>
-              <Image src='/icons/mail.svg' width='20' height='20' />
+              <Icon name='mail' />
               <p>email@email.com</p>
             </a>
           </Link>
@@ -27,7 +27,7 @@ export default function AppHeaderDesktop() {
         <li>
           <Link href='/'>
             <a className={styles['menu-contact-link']}>
-              <Image src='/icons/clock.svg' width='20' height='20' />
+              <Icon name='clock' />
               <p>Ma-vr - 10:00-16:00</p>
             </a>
           </Link>

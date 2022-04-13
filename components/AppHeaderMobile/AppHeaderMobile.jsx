@@ -3,6 +3,8 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
+import Icon from '../Icon/Icon'
+
 import styles from './AppHeaderMobile.module.css'
 
 export default function AppHeaderMobile() {
@@ -52,7 +54,7 @@ export default function AppHeaderMobile() {
             <li>
               <Link href='/'>
                 <a className={styles['menu-contact-link']}>
-                  <Image src='/icons/phone.svg' width='20' height='20' />
+                  <Icon name='phone' className='fill' />
                   <p>+31 6 12345678</p>
                 </a>
               </Link>
@@ -60,7 +62,7 @@ export default function AppHeaderMobile() {
             <li>
               <Link href='/'>
                 <a className={styles['menu-contact-link']}>
-                  <Image src='/icons/mail.svg' width='20' height='20' />
+                  <Icon name='mail' />
                   <p>email@email.com</p>
                 </a>
               </Link>
@@ -68,7 +70,7 @@ export default function AppHeaderMobile() {
             <li>
               <Link href='/'>
                 <a className={styles['menu-contact-link']}>
-                  <Image src='/icons/clock.svg' width='20' height='20' />
+                  <Icon name='clock' />
                   <p>Ma-vr - 10:00-16:00</p>
                 </a>
               </Link>

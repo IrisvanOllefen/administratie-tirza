@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import AppHeader from '../components/AppHeader'
 
+import Icon from '../components/Icon/Icon'
+
 export default function Home() {
   return (
     <div>
@@ -11,6 +13,7 @@ export default function Home() {
       <AppHeader />
 
       <main>
+        <Icon name='clock' />
         <h1>Administratiekantoor Tirza van Ollefen</h1>
 
         {/* foto */}
