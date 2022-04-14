@@ -1,0 +1,18 @@
+.contact-banner {
+  width: 100%;
+  background-color: var(--accent);
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+  color: var(--white);
+}
+
+.menu-contact-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-contact-link p {
+  padding: 0 2rem;
+}

@@ -1,7 +1,9 @@
 .header {
-  /* display: flex; */
-  justify-content: space-around;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
 }
+
 .header h1 {
   font-size: 3rem;
 }
@@ -29,25 +31,8 @@
   background-color: var(--white);
   height: 100vh;
   position: absolute;
+  top: 10rem;
   width: 100vw;
   right: 0;
   padding: 1rem;
-}
-
-.menu-contact {
-  padding-top: 4rem;
-}
-
-.menu-contact li {
-  padding: 1rem 0;
-}
-
-.menu-contact-link {
-  display: flex;
-  gap: 1rem;
-}
-
-.menu-contact-link:hover {
-  text-decoration-line: underline;
-  text-underline-offset: 1rem;
 }

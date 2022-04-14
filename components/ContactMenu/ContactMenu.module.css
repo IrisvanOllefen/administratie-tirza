@@ -1,0 +1,17 @@
+.menu-contact {
+  padding-top: 4rem;
+}
+
+.menu-contact li {
+  padding: 1rem 0;
+}
+
+.menu-contact-link {
+  display: flex;
+  gap: 1rem;
+}
+
+.menu-contact-link:hover {
+  text-decoration-line: underline;
+  text-underline-offset: 1rem;
+}

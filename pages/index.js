@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import AppHeader from '../components/AppHeader'
+import AppFooter from '../components/AppFooter'
 
 import Icon from '../components/Icon/Icon'
 
@@ -79,12 +80,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer>
-        {/* links */}
-        {/* algemene voorwaarden */}
-        {/* contact */}
-        {/* privacy statement */}
-      </footer>
+      <AppFooter />
     </div>
   )
 }

@@ -39,3 +39,7 @@ button:active {
   color: var(--black);
   text-decoration-line: none;
 }
+
+.white-link {
+  color: var(--white);
+}
