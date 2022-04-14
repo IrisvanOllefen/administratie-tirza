@@ -1,10 +1,30 @@
 import Head from 'next/head'
+
+import { request } from '../lib/datocms'
+
 import AppHeader from '../components/AppHeader'
 import AppFooter from '../components/AppFooter'
 
 import Icon from '../components/Icon/Icon'
 
-export default function Home() {
+const QUERY = ` query MyQuery {
+  test {
+    title
+  }
+}
+`
+
+export async function getStaticProps() {
+  const data = await request({
+    query: QUERY,
+  })
+
+  return {
+    props: { data },
+  }
+}
+
+export default function Home({ data }) {
   return (
     <div>
       <Head>
@@ -16,6 +36,7 @@ export default function Home() {
       <main>
         <Icon name='clock' />
         <h1>Administratiekantoor Tirza van Ollefen</h1>
+        <h1>{data.test.title}</h1>
 
         {/* foto */}
 
