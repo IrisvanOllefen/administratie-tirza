@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { useState } from 'react'
-import Link from 'next/link'
 
 import Logo from '../Logo'
 import ContactMenu from '../ContactMenu'
@@ -15,13 +14,9 @@ export default function AppHeaderMobile({ data }) {
       <Logo />
       <div className={styles.section}>
         {click ? (
-          <button onClick={() => setClick(false)} className={styles.button}>
-            Sluiten
-          </button>
+          <button onClick={() => setClick(false)}>Sluiten</button>
         ) : (
-          <button onClick={() => setClick(true)} className={styles.button}>
-            Menu
-          </button>
+          <button onClick={() => setClick(true)}>Menu</button>
         )}
       </div>
       {click ? (

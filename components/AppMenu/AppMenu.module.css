@@ -1,15 +1,17 @@
-.mobile {
+.menu-items {
   display: flex;
+}
+
+.mobile {
   flex-direction: column;
   align-items: flex-start;
 }
 
 .desktop {
-  display: flex;
   flex-direction: row;
 }
 
-.menu-items li {
+.desktop li {
   padding: 0 2rem;
 }
 

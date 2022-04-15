@@ -1,7 +1,7 @@
 .footer {
   background-color: var(--accent);
-  color: white;
-  padding: 2rem 1rem;
+  color: var(--white);
+  padding: 2rem;
   display: flex;
   flex-direction: column;
 }
@@ -18,17 +18,9 @@
   font-size: 2rem;
 }
 
-.logo {
-  line-height: 1.2;
-}
-
 .decor-line {
   height: 0.2rem;
   background-color: var(--white);
   width: 28rem;
   margin: 2rem 0 3rem;
-}
-
-.basic-links {
-  padding: 2rem;
 }

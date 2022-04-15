@@ -1,11 +1,11 @@
 import Link from 'next/link'
+import classNames from 'classnames'
 
 import ContactMenu from '../ContactMenu'
 import Logo from '../Logo'
 import AppMenu from '../AppMenu'
 
 import styles from './AppFooter.module.css'
-import classNames from 'classnames'
 
 export default function AppFooter({ data }) {
   return (

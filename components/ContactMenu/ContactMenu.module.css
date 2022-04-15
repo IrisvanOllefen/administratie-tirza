@@ -1,5 +1,5 @@
 .menu-contact {
-  padding-top: 4rem;
+  padding: 3rem 0;
 }
 
 .menu-contact li {
@@ -17,7 +17,7 @@
 }
 
 .white {
-  color: white;
+  color: var(--white);
 }
 
 .accent {
