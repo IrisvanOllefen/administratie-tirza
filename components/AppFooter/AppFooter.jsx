@@ -1,45 +1,46 @@
-import classNames from 'classnames'
 import Link from 'next/link'
 
 import ContactMenu from '../ContactMenu'
 import Logo from '../Logo'
+import AppMenu from '../AppMenu'
 
 import styles from './AppFooter.module.css'
+import classNames from 'classnames'
 
-export default function AppFooter() {
+export default function AppFooter({ data }) {
   return (
-    <footer className={styles.footer}>
+    <footer key='footer' className={styles.footer}>
       <Logo />
       <div className={styles['decor-line']}></div>
-      <ul className={styles['menu-items']}>
-        <li>
-          <Link href='/'>
-            <a className={classNames('menu-link', 'white-link')}>
-              Financiële Administratie
-            </a>
-          </Link>
-        </li>
-        <li>
-          <Link href='/'>
-            <a className={classNames('menu-link', 'white-link')}>
-              Fiscale Aangiften
-            </a>
-          </Link>
-        </li>
-        <li>
-          <Link href='/'>
-            <a className={classNames('menu-link', 'white-link')}>
-              Jaarrekening
-            </a>
-          </Link>
-        </li>
-      </ul>
-      <ContactMenu />
+      {data.menu.menu.map((item) => {
+        return (
+          <AppMenu key={item} data={item} styling='mobile' fontColor='white' />
+        )
+      })}
+      {data.contactmodel.contactblock.map((item) => {
+        return (
+          <ContactMenu key={item} data={item.contactItem} fontColor='white' />
+        )
+      })}
       <ul className={styles['basic-links']}>
-        <li>Algemene Voorwaarden</li>
-        <li>Privacyverklaring</li>
-        <li>Disclaimer</li>
-        <li>Contact</li>
+        {data.footermenu.footermenu.map((item) => {
+          return (
+            <>
+              {item.footermenulink.map((something) => {
+                console.log(something)
+                return (
+                  <li key={something.title}>
+                    <Link href={something.link}>
+                      <a className={classNames('menu-link', 'white-link')}>
+                        {something.title}
+                      </a>
+                    </Link>
+                  </li>
+                )
+              })}
+            </>
+          )
+        })}
       </ul>
     </footer>
   )

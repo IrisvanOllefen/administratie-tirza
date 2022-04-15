@@ -7,9 +7,30 @@ import AppFooter from '../components/AppFooter'
 
 import Icon from '../components/Icon/Icon'
 
-const QUERY = ` query MyQuery {
-  test {
-    title
+const QUERY = `query MyQuery {
+  contactmodel {
+    contactblock {
+      contactItem {
+        category
+        title
+      }
+    }
+  }
+  menu {
+    menu {
+      menulink {
+        title
+        link
+      }
+    }
+  }
+  footermenu {
+    footermenu {
+      footermenulink {
+        title
+        link
+      }
+    }
   }
 }
 `
@@ -31,12 +52,12 @@ export default function Home({ data }) {
         <title>Administratiekantoor Tirza van Ollefen</title>
       </Head>
 
-      <AppHeader />
+      <AppHeader data={data} />
+
+      {/* contactData={data.contactmodel.contactblock} */}
 
       <main>
-        <Icon name='clock' />
         <h1>Administratiekantoor Tirza van Ollefen</h1>
-        <h1>{data.test.title}</h1>
 
         {/* foto */}
 
@@ -101,7 +122,7 @@ export default function Home({ data }) {
         </div>
       </main>
 
-      <AppFooter />
+      <AppFooter data={data} />
     </div>
   )
 }

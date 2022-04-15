@@ -15,3 +15,11 @@
   text-decoration-line: underline;
   text-underline-offset: 1rem;
 }
+
+.white {
+  color: white;
+}
+
+.accent {
+  color: var(--accent);
+}

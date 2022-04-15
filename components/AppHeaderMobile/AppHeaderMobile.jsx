@@ -4,10 +4,11 @@ import Link from 'next/link'
 
 import Logo from '../Logo'
 import ContactMenu from '../ContactMenu'
+import AppMenu from '../AppMenu'
 
 import styles from './AppHeaderMobile.module.css'
 
-export default function AppHeaderMobile() {
+export default function AppHeaderMobile({ data }) {
   const [click, setClick] = useState(false)
   return (
     <header className={styles.header}>
@@ -25,29 +26,18 @@ export default function AppHeaderMobile() {
       </div>
       {click ? (
         <div className={styles.menu}>
-          <ul>
-            <li>
-              <Link href='/'>
-                <a className='menu-link'>Financiele Administratie</a>
-              </Link>
-            </li>
-            <li>
-              <Link href='/'>
-                <a className='menu-link'>Fiscale Aangiften</a>
-              </Link>
-            </li>
-            <li>
-              <Link href='/'>
-                <a className='menu-link'>Jaarrekening</a>
-              </Link>
-            </li>
-            <li>
-              <Link href='/'>
-                <a className='menu-link'>Contact</a>
-              </Link>
-            </li>
-          </ul>
-          <ContactMenu />
+          {data.menu.menu.map((item) => {
+            return <AppMenu key={item} data={item} styling='mobile' />
+          })}
+          {data.contactmodel.contactblock.map((item) => {
+            return (
+              <ContactMenu
+                key={item}
+                data={item.contactItem}
+                fontColor='accent'
+              />
+            )
+          })}
         </div>
       ) : null}
     </header>

@@ -4,35 +4,19 @@ import styles from './AppHeaderDesktop.module.css'
 
 import ContactBanner from '../ContactBanner'
 import Logo from '../Logo'
+import AppMenu from '../AppMenu'
 
-export default function AppHeaderDesktop() {
+export default function AppHeaderDesktop({ data }) {
   return (
     <>
-      <ContactBanner />
+      {data.contactmodel.contactblock.map((item) => {
+        return <ContactBanner key={item.contactItem} data={item.contactItem} />
+      })}
       <header className={styles.header}>
         <Logo />
-        <ul className={styles['menu-items']}>
-          <li>
-            <Link href='/'>
-              <a className='menu-link'>Financiele Administratie</a>
-            </Link>
-          </li>
-          <li>
-            <Link href='/'>
-              <a className='menu-link'>Fiscale Aangiften</a>
-            </Link>
-          </li>
-          <li>
-            <Link href='/'>
-              <a className='menu-link'>Jaarrekening</a>
-            </Link>
-          </li>
-          <li>
-            <Link href='/'>
-              <a className='menu-link'>Contact</a>
-            </Link>
-          </li>
-        </ul>
+        {data.menu.menu.map((item) => {
+          return <AppMenu key={item} data={item} styling='desktop' />
+        })}
       </header>
     </>
   )
