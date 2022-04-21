@@ -1,6 +1,5 @@
 import Link from 'next/link'
 
-import Icon from '../Icon/Icon'
 import styles from './ContactBanner.module.css'
 
 export default function ContactBanner({ data }) {
@@ -11,7 +10,7 @@ export default function ContactBanner({ data }) {
           <li key={item}>
             <Link href='/'>
               <a className={styles['menu-contact-link']}>
-                <Icon name={item.category} />
+                {/* <Icon name={item.category} /> */}
                 <p>{item.title}</p>
               </a>
             </Link>

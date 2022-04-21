@@ -27,7 +27,6 @@ export default function AppFooter({ data }) {
           return (
             <>
               {item.footermenulink.map((something) => {
-                console.log(something)
                 return (
                   <li key={something.title}>
                     <Link href={something.link}>

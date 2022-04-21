@@ -1,13 +1,15 @@
+/* eslint-disable jsx-a11y/alt-text */
 import classNames from 'classnames'
 import Link from 'next/link'
+import Image from 'next/image'
 
-import Icon from '../Icon/Icon'
 import styles from './ContactMenu.module.css'
 
 export default function ContactMenu({ data, fontColor }) {
   return (
     <ul className={styles['menu-contact']}>
       {data.map((item) => {
+        console.log(item.category)
         return (
           <li key={item}>
             <Link href='/'>
@@ -16,7 +18,14 @@ export default function ContactMenu({ data, fontColor }) {
                   styles['menu-contact-link'],
                   styles[fontColor]
                 )}>
-                <Icon name={item.category} />
+                <div>
+                  <Image
+                    src={`/icons/${item.category}.svg`}
+                    width={24}
+                    height={24}
+                    className={styles.icon}
+                  />
+                </div>
                 <p>{item.title}</p>
               </a>
             </Link>

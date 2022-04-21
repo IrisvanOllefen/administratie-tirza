@@ -1,11 +1,11 @@
+/* eslint-disable jsx-a11y/alt-text */
 import Head from 'next/head'
+import Image from 'next/image'
 
 import { request } from '../lib/datocms'
 
 import AppHeader from '../components/AppHeader'
 import AppFooter from '../components/AppFooter'
-
-import Icon from '../components/Icon/Icon'
 
 const QUERY = `query MyQuery {
   contactmodel {
@@ -53,8 +53,6 @@ export default function Home({ data }) {
       </Head>
 
       <AppHeader data={data} />
-
-      {/* contactData={data.contactmodel.contactblock} */}
 
       <main>
         <h1>Administratiekantoor Tirza van Ollefen</h1>
